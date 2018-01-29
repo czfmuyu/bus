@@ -1,0 +1,140 @@
+<!--first.wxml-->
+<view class="bg">
+  <view class="box" bindtap="bindLeft">
+     <image wx:if="{{boxImage}}" src="../images/mine.png" class="box-image"></image>
+    <image wx:if="{{userImage}}" src="{{avatarUrl}}" class="userImage"></image>
+  </view>
+</view>
+
+<view class="box-content">
+<view class="box-center">
+  <view class="top">
+    <text class="top-text">您已乘车，请注意人身财产的安全</text>
+  </view>
+  <view class="center">
+    <view class="box1">
+      <view class="box1-top">
+        <image src="../images/qrcode_routes@3x.png" class="img-left img-lf"></image>
+        <text class="box1-text">线路</text>
+      </view>
+      <text class="box1-text2">{{busline}}</text>
+    </view>
+    <view class="box1">
+      <view class="box1-top">
+        <image src="../images/qrcode_price@3x.png" class="img-left"></image>
+        <text class="box1-text">票价</text>
+      </view>
+        <text class="box1-text2">{{price}}</text> 
+    </view>
+  </view>
+  <view class="center2">
+      <view class="box2">
+            <view class="box2-top">
+        <image src="../images/qrcode_terminal@3x.png" class="img-left img-lf"></image>
+        <text class="box2-text">始发站</text>
+      </view>
+      <text class="box2-text2">{{start}}</text>
+    </view>
+    <view class="box2">
+      <view class="box2-top">
+        <image src="../images/qrcode_terminus@3x.png" class="img-left"></image>
+        <text class="box2-text">终点站</text>
+      </view>
+        <text class="box2-text2">{{end}}</text> 
+    </view>
+    </view>
+    <view class="end" bindtap="bindEnd" >
+      <button hover-stay-time="200" disabled="{{disabled}}" class="end-button" hover-class="hover">结束行程</button>
+    </view>
+    <!--<view bindtouchstart='movableArea' id="movableArea"  style="width:500rpx; height:100rpx;background: blue;position:relative ">
+      <view id="movableView" catchtouchmove="touchMove"  style="height: 100rpx; width: 200rpx; background: red;position:absolute;left:{{left}}px;top:{{top}}px"  >
+      </view>
+    </view>-->
+    
+    <view class="route" style="margin-bottom:40rpx;margin-top:20rpx">
+      <image style="width:40rpx;height:40rpx;float:left" src="../images/LineQuery.png"></image>
+      <text catchtap="route" style="float:left;margin-left:10rpx">查看线路详情</text>
+    </view>
+</view>
+</view>
+<!--<view class="logo">
+  <image src="../images/logo.png" class="img-logo"></image>
+</view>-->
+<view class="companyPhone" bindtap="bindPhone">
+  
+  <text>联系客服</text>
+</view>
+<view class="motai-all" style="width:100%;height:{{height}}%">
+  <view class="motai-top" id="motai-top">
+    <view class="top1">
+      <view class="box-return" catchtap="cancle">
+        <image style="width:100%;height:100%;vertical-align:top" src="../images/popup_close@3x.png"></image>
+      </view>
+      <view class="text1" style="padding-top:10rpx">
+        <text style="color:#06b7ca;font-size:36rpx;">{{busline}}</text>
+      </view>
+      <view class="text2" style="color:#06b7ca;font-size:24rpx;padding:4rpx 0 10rpx 0">
+        {{start}}-{{end}}
+      </view>  
+    </view>
+    <view class="top2">
+      <view class="top2-box">
+        <image style="width:38rpx;height:38rpx;float:left" src="../images/click@3x.png"></image>
+        <text style="color:#767676;font-size:26rpx;float:left;margin-top:8rpx;margin-left:10rpx">双击站点设置到站提醒</text>
+      </view>
+      
+    </view>
+  </view>
+<scroll-view scroll-y="true" class="motai" id="motai" style="height:100%;background:#eeeeee" >
+
+  <view  class="motai-content" wx:if="{{false}}">
+    <view bindtap="dbTap" class="motai-content-all" style="margin-top:{{mtHeight}}px;margin-bottom:30px">
+        <view id="{{index}}" class="motai-content1 motai-content1-first" wx:for="{{list}}">
+          <view id="{{index}}" class="motai-left1" >
+            <image wx:if="{{index+1 == stindex}}" src="../images/routes_boarding_point@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == arrMin}}" src="../images/routes_people@3x-.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == dbClick}}" src="../images/routes_clock@3x-.png" style="width:40rpx;height:40rpx"></image>
+          </view>
+          <view id="{{index}}" class="motai-left2">
+            <view id="{{index}}" class="motai-left2-top">{{item.stindex}}</view>
+            <view class="motai-left2-bottom" wx:if="{{leftBottom-1!=index}}"></view>
+          </view>
+          <view id="{{index}}" class="motai-left3" wx:if="{{stindex>index+1||index>arrMin}}">{{item.name}}</view>
+          <view id="{{index}}" class="motai-left3" style="color:#06b7ca" wx:if="{{stindex<=index+1&&index<=arrMin}}">{{item.name}}</view>
+          <view id="{{index}}" class="motai-left4" >
+            <image wx:if="{{index+1 == stindex}}" src="../images/terminal_button@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == arrMin}}" src="../images/current_location@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == dbClick}}" src="../images/arrival_reminder@3x.png" style="width:100%;height:100%"></image>
+          </view>
+        </view>
+    </view>        
+  </view>
+
+
+  <view  class="motai-content" wx:if="{{true}}">
+    <view bindtap="dbTap" class="motai-content-all" style="margin-top:{{mtHeight}}px;margin-bottom:30px">
+        <view id="{{index}}" class="motai-content1 motai-content1-first" wx:for="{{list}}">
+          <view id="{{index}}" class="motai-left1" >
+            <image wx:if="{{index+1 == stindex}}" src="../images/routes_boarding_point@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == arrMin}}" src="../images/routes_people@3x-.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == dbClick}}" src="../images/routes_clock@3x-.png" style="width:40rpx;height:40rpx"></image>
+          </view>
+          <view id="{{index}}" class="motai-left2">
+            <view id="{{index}}" class="motai-left2-top">{{item.stindex}}</view>
+            <view class="motai-left2-bottom" wx:if="{{leftBottom-1!=index}}"></view>
+          </view>
+          <view id="{{index}}" class="motai-left3" wx:if="{{stindex>index+1||index>arrMin}}">{{item.name}}</view>
+          <view id="{{index}}" class="motai-left3" style="color:#06b7ca" wx:if="{{stindex<=index+1&&index<=arrMin}}">{{item.name}}</view>
+          <view id="{{index}}" class="motai-left4" >
+            <image wx:if="{{index+1 == stindex}}" src="../images/terminal_button@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == arrMin}}" src="../images/current_location@3x.png" style="width:100%;height:100%"></image>
+            <image wx:if="{{index == dbClick}}" src="../images/arrival_reminder@3x.png" style="width:100%;height:100%"></image>
+          </view>
+        </view>
+    </view>        
+  </view>
+
+  
+</scroll-view>
+</view>
+

@@ -1,0 +1,16 @@
+/* welcome.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.img-top{
+  width:317rpx;
+  height:460rpx;
+  margin-top:200rpx;
+}
+.img-bottom{
+  width:452rpx;
+  height:48rpx;
+  margin-top: 50rpx;
+}

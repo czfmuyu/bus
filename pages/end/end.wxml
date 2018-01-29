@@ -1,0 +1,67 @@
+<!--end.wxml-->
+<view class="box-center">
+  <view class="center">
+    <view class="box1">
+      <view class="box1-left"></view>
+      <view class="box1-center">
+        <text class="box1-text">行程详情</text>
+      </view>
+      <view class="box1-left"></view>
+    </view>
+    <view class="box2">
+      <view class="box2-left">
+        <image src="../images/payment_routes.png" class="box-image" ></image>
+        <text class="box-text">线路</text>
+      </view>
+      <view class="box2-right">
+        <text class="box-right">{{remark}}</text>
+      </view>
+    </view>
+    <view class="box3">
+      <view class="box2-left">
+        <image src="../images/payment_terminal.png" class="box-image" ></image>
+        <text class="box-text">上车站点</text>
+      </view>
+      <view class="box2-right">
+        <text class="box-right">{{name}}</text>
+      </view>
+    </view>
+    <view class="box4">
+      <view class="box2-left">
+        <image src="../images/payment_time.png" class="box-image" ></image>
+        <text class="box-text">时间</text>
+      </view>
+      <view class="box2-right">
+        <text class="box-right box-time">{{getontime}}</text>
+      </view>
+    </view>
+    <view class="box5">
+      <view class="box1-left"></view>
+      <view class="box1-center">
+        <text class="box1-text">车费详情</text>
+      </view>
+      <view class="box1-left"></view>
+    </view>
+    <view class="box6">
+      <view class="box2-left">
+        <image src="../images/payment_monetary.png" class="box-image" ></image>
+        <text class="box-text">消费金额</text>
+      </view>
+      <view class="box2-right">
+        <text class="box-monney">{{cost}}元</text>
+      </view>
+    </view>
+    <view class="box7" bindtap="bindTo">
+      <view class="box7-center">
+        <button hover-class="hover" hover-stay-time="200" disabled="{{disabled}}" class="box7-text" >确认支付{{cost}}元</button>
+        <!--<text class="box7-text" hover-class="hover">确认支付{{cost}}元</text>-->
+      </view>
+    </view>
+  </view>
+</view>
+<view class="logo">
+  <image src="../images/logo.png" class="img-logo"></image>
+</view>
+<view class="companyPhone" bindtap="bindPhone">
+  <text>联系客服</text>
+</view>

@@ -1,0 +1,41 @@
+<!--priceList.wxml-->
+<block wx:for="{{priceList}}">
+<view class="box" >
+   <view class="box1"  >
+     <view class="box-left">
+       <text class="pay-left">消费金额</text>
+     </view>
+     <view class="box-right ">
+       <text class="pay-right text-right">￥{{priceList[index].cost}}</text>
+     </view>
+   </view>
+   <view class="box1">
+     <view class="box-left">
+       <image src="../images/dot.png" class="img-dot"></image>
+       <text class="text-left">线路</text>
+     </view>
+     <view class="box-right">
+       <text class="text-right">{{priceList[index].remark}}</text>
+     </view>
+   </view>
+   <view class="box1">
+     <view class="box-left">
+       <image src="../images/dot.png" class="img-dot"></image>
+       <text class="text-left">上车站点</text>
+     </view>
+     <view class="box-right">
+       <text class="text-right">{{priceList[index].name}}</text>
+     </view>
+   </view>
+   <view class="box1">
+     <view class="box-left">
+       <image src="../images/clock.png" class="img-clock"></image>
+       <text class="text-left">时间</text>
+     </view>
+     <view class="box-right">
+       <text class="text-right">{{priceList[index].createtime}}</text>
+     </view>
+   </view>
+</view>
+</block>
+

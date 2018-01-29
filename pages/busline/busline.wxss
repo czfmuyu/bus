@@ -1,0 +1,142 @@
+/* pages/busline/busline.wxss */
+.top{
+  background: #4086ff;
+  color: white;
+  font-size: 37rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18rpx 0 20rpx 0;
+
+}
+.head{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width:90%;
+}
+.head .text1{
+  width:35%;
+
+}
+.head .text2{
+  width:45%;
+  text-align: right
+
+}
+.bottom{
+  width:90%;
+  margin-top:14rpx;
+  text-align: right;
+}
+.all{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+}
+.all_content{
+  width:82%;
+  margin-left: 94rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+  padding: 20rpx 0 20rpx 0;
+  position: relative;
+}
+.busline{
+  padding: 10rpx 0 20rpx 0;
+  position: relative;
+}
+.busline_text .text1{
+  font-size: 30rpx;
+  color: #999;
+  
+}
+.busline .text2{
+  font-size: 38rpx;
+  font-weight: bold;
+
+}
+.busline .text3{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.busline .text4{
+  font-size: 30rpx;
+  color: #999;
+  
+}
+.busline .text5{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.border_bottom{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  height:4rpx;
+  background: #f0eff5;
+}
+.bluecircle{
+  width:24rpx;
+  height:24rpx;
+  background: #4086ff;
+  position: absolute;
+  top:50%;
+  left: -48rpx;
+  border-radius: 12rpx;
+  transform: translateY(-12rpx);
+  z-index: 9
+}
+.graycercle{
+  width:24rpx;
+  height:24rpx;
+  background: #ccc;
+  position: absolute;
+  top:50%;
+  left: -48rpx;
+  border-radius: 12rpx;
+  transform: translateY(-12rpx)
+}
+.redcircle{
+  width:24rpx;
+  height:24rpx;
+  background:red;
+  position: absolute;
+  top:50%;
+  left: -48rpx;
+  border-radius: 12rpx;
+  transform: translateY(-12rpx);
+  z-index: 9;
+}
+.grayline1{
+  width: 4rpx;
+  height:50%;
+  position: absolute;
+  left: -38rpx;
+  top:50%;
+  background: #ccc;
+}
+.grayline2{
+  width: 4rpx;
+  height:100%;
+  position: absolute;
+  left: -38rpx;
+  top:0;
+  background: #ccc;
+}
+.grayline3{
+  width: 4rpx;
+  height:50%;
+  position: absolute;
+  left: -38rpx;
+  top:0;
+  background: #ccc;
+}

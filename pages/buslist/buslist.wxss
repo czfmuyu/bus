@@ -1,0 +1,70 @@
+/* buslist.wxss */
+page{
+  background: #f0eff5;
+}
+.top{
+  width:100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0 40rpx 0;
+
+}
+.route{
+  font-weight: bold;
+  font-size: 36rpx;
+  width:90%; 
+  overflow: hidden; 
+  text-align: right;
+}
+.route text{
+  vertical-align: middle
+}
+.route image{
+  vertical-align: middle
+}
+
+
+.km{
+  width:90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: #666;
+  font-size: 32rpx;
+  margin-top:12rpx;
+  
+
+}
+.bus{
+  
+  margin-top: 18rpx;
+  padding: 30rpx 0 30rpx 30rpx;
+  background: white
+}
+.bus_all{
+  overflow: hidden
+}
+.bus2{
+  float: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.route-text{
+  font-weight: bold;
+  font-size: 36rpx;
+  
+}
+.busmt{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+  margin-top: 10rpx;
+}

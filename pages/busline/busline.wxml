@@ -1,0 +1,58 @@
+<!--pages/busline/busline.wxml-->
+<view class='top'>
+  <view class='head'>
+    <text class='text1'>{{start}}</text>
+    <image src='../images/whiteto.png' style='width:38rpx;height:38rpx'></image>
+    <text class="text2" >{{end}}</text>
+  </view>
+  <view class='bottom'>
+    <text style='vertical-align:middle'>{{time}}分钟</text>
+    <image src='../images/whitepoint.png' style='width:10rpx;height:10rpx;vertical-align:middle;margin:0 10rpx 0 10rpx'></image>
+    <text style='vertical-align:middle'>{{cost}}元</text>
+  </view>
+</view>
+
+<view class='all'>
+  <view class='all_content'>
+    <view class='content'>
+      <text style='color:#666'>从<text style='margin-left:10rpx;margin-right:10rpx;'>{{start}}</text><text>出发</text></text>
+      <text style='color:#999'>共{{km}}公里</text>
+      <view class='border_bottom'></view>
+      <view class='bluecircle'></view>
+      <view class='grayline1'></view>
+    </view>
+
+    <view class='busline' wx:for="{{segments}}" >
+      <view class='border_bottom'></view>
+      <view class='graycercle'></view>
+      <view class='grayline2'></view>
+      <view class='busline_text' >
+        <block wx:for="{{item.walking.steps}}" wx:for-item="items">
+          <text style='vertical-align:middle' class='text1' >{{items.instruction}}</text>
+          <image wx:if="{{index<item.walking.steps.length-1}}" src='../images/grayto.png' style='width:32rpx;height:24rpx;vertical-align:middle;margin:0 8rpx 0 8rpx'></image>
+        </block>
+      </view>
+      <view style='margin-top:10rpx'><text class='text2'>{{item.bus.buslines[0].name}}</text></view>
+      <view style='margin-top:10rpx'><text class='text3'>{{item.bus.buslines[0].departure_stop.name}}</text></view>
+      <view class='text4' wx:if="{{item.bus.buslines.length!=0}}">
+        <text style='vertical-align:middle'>途经{{item.bus.buslines[0].via_stops.length}}个站点: </text>
+        <block wx:for="{{item.bus.buslines[0].via_stops}}">
+          <image wx:if="{{index}}" src='../images/grayto.png' style='width:32rpx;height:24rpx;vertical-align:middle;margin:0 8rpx 0 8rpx'></image>
+          <text style='vertical-align:middle'>{{item.name}}</text>
+        </block>
+      </view>
+      <view style=''><text class='text5'>{{item.bus.buslines[0].arrival_stop.name}}</text></view>
+    </view>
+
+    <view class='content'>
+      <text style='color:#666'>到达<text style='margin-left:10rpx;'>{{end}}</text></text>
+      <text style='color:#999;text-align:right'>共{{km}}公里</text>
+      <view class='border_bottom'></view>
+      <view class='redcircle'></view>
+      <view class='grayline3'></view>
+    </view>
+  </view>
+</view>
+
+
+

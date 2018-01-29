@@ -1,0 +1,41 @@
+/**index.wxss**/
+page{
+  background: #ffffff;
+  width:100%;
+  height:100%;
+  
+}
+.btn{
+  width:444rpx;
+  height:90rpx;
+  background: #222;
+  font-size: 38rpx;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  bottom: 144rpx;
+  transform: translateX(-222rpx);
+
+}
+.hover-class{
+  color: #000;
+  background: #2b2b2b;
+}
+.motai{
+  position: absolute;
+  left: 0;
+  top:0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(0,0,0, 0.8);
+  
+  
+}
+.imgCenter{
+  height:780rpx;
+  width:616rpx;
+  margin-top: 104rpx;
+}

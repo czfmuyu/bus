@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view style="width:100%;height:100%" class="classname">
+  <image style="width:100%;height:100%" mode="aspectFill" src="../images/index_bg.png"></image>
+</view>
+<button bindtap="start" disabled="{{disabled}}" hover-stay-time="100" hover-class="hover-class" wx:if="{{button}}" class="btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即注册 </button>
+<view class="motai" style="height:{{motaiHeight}}%;">
+  <image class="imgCenter" src="../images/imgCenter.png" ></image>
+  <button bindtouchstart="finish" style="width:230rpx;height:80rpx;margin-top:140rpx;line-height:80rpx;background:f7f7f7;font-size:34rpx">我知道了</button>
+</view> 
+
+

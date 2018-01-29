@@ -1,0 +1,36 @@
+<!--buslist.wxml-->
+<view class="top">
+  <view class="route">
+    <text>{{start}}</text>
+    <image src='../images/blackto.png' style='width:40rpx;height:40rpx;margin-right:20rpx;margin-left:20rpx'></image>
+    <text>{{end}}</text>
+  </view>
+  <view class="km">
+    <text>{{km}}公里</text>
+    <image src='../images/whitepoint.png' style='width:20rpx;height:20rpx'></image>
+    <text>出租车{{taxiprice}}元起</text>
+  </view>
+</view>
+
+<view wx:for="{{busarray}}" class="bus" bindtap='bindbus' data-start='{{start}}' data-end="{{end}}" data-km="{{km}}" data-bus='{{index}}'>
+  <view class='bus1' wx:for="{{arr}}">
+    <text>{{item}}</text>
+  </view>
+  <view class='bus_all'>
+    <view class='bus2' wx:for="{{item.bus}}" wx:for-item="item2">
+      <view  class='route-text'>
+        <text wx:for="{{item2.apartbus}}">{{item}}<text wx:if="{{index<item2.apartbus_length-1}}">/</text></text>
+      </view>
+      <image wx:if="{{index<item.bus.length-1}}" src='../images/grayto.png' style='width:38rpx;height:34rpx;margin:0 8rpx 0 8rpx'></image>
+    </view>
+  </view>
+  <view class="busmt">
+    <text>{{item.duration}}分钟</text>
+    <image src='../iamges/whitepoint.png' style='width:20rpx;height:20rpx'></image>
+    <text>{{item.cost}}元</text>
+    <image src='../iamges/whitepoint.png' style='width:20rpx;height:20rpx'></image>
+    <text>步行{{item.work}}公里</text>
+  </view>
+  <text style='font-size:32rpx;color:#666;display:inline-block;margin-top:10rpx'>本路线{{item.distance}}公里</text>
+</view>
+

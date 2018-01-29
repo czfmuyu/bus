@@ -1,0 +1,3 @@
+<!--welcome.wxml-->
+<image src="../images/login_logo.png" class="img-top"></image>
+<image src="../images/nav_logo@3x.png" class="img-bottom"></image>

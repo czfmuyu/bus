@@ -1,0 +1,36 @@
+<!--userinfo.wxml-->
+<view class="bg">
+</view>
+<view class="motai">
+    <view class="motai-left">
+      <view class="motai-center">
+      <view class="user-top">
+        <view class="user-image">
+          <image class="user-image2" src="{{avatarUrl}}"></image>
+        </view>
+        <view class="user-text">
+          <text class="text1">{{nickName}}</text>
+          <text class="text2">{{phone}}</text>
+        </view>
+      </view>
+      <view class="price-bottom" catchtap="catchpPrice">
+        <image class="price-image" src="../images/detail@3x.png"></image>
+        <text class="price-text">账单</text>
+      </view>
+      <view class='map' bindtap="bindto">
+        <image src='../images/search@3x.png'></image>
+        <text >地图</text>
+      </view>
+      <!--<view class='buscard' bindtap='bindaddcard'>
+        <image src='../images/recharge@3x.png'></image>
+        <text>公交卡</text>
+      </view>-->
+      <button class="share" open-type='share'>
+        <image src='../images/score@3x.png'></image>
+        <text>转发</text>
+      </button>
+      </view>    
+    </view>
+    
+</view>
+

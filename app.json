@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/main/main",
+    "pages/first/first",
+    "pages/userinfo/userinfo",
+    "pages/priceList/priceList",
+    "pages/end/end",
+    "pages/map/map",
+    "pages/map2/map2",
+    "pages/buslist/buslist",
+    "pages/busline/busline"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/map/map",
+        "text": "路线查询",
+        "iconPath": "pages/images/blacklocation.png",
+        "selectedIconPath":"pages/images/bluelocation.png"
+      },
+      {
+        "pagePath": "pages/map2/map2",
+        "text": "附近公交",
+        "iconPath": "pages/images/blackroute.png",
+        "selectedIconPath": "pages/images/blueroute.png"
+      }
+    ],
+    "selectedColor": "#4086ff",
+    "color":"black"
+  }
+}

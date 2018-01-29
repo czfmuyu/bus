@@ -1,0 +1,27 @@
+<!--pages/main/index.wxml-->
+<view class="bg">
+  <view class="box" bindtap="bindLeft">
+    <image wx:if="{{boxImage}}" src="../images/mine.png" class="box-image"></image>
+    <image wx:if="{{userImage}}" src="{{avatarUrl}}" class="userImage"></image>
+  </view>
+</view>
+<view class="box-center">
+    <view class="img-box" wx:if="{{canvas}}">
+        <canvas binderror="canvasError" wx:if="{{canvas}}" bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 600rpx;height: 600rpx;" canvas-id="mycanvas"/>
+        
+    </view> 
+    <image class="imgChange" src="../images/login_logo.png" wx:if="{{imgChange}}"></image>
+    <view class="box2">
+  <text  wx:if="{{text}}"  >请把手机贴近检票口，扫描检票乘车</text>
+  <text class="textChange" wx:if="{{textChange}}">获取不到位置信息，无法扫二维码上车</text>
+</view>
+
+</view> 
+<view class="logo">
+  <image src="../images/logo.png" class="img-logo"></image>
+</view>
+<view class="companyPhone" bindtap="bindPhone">
+  <text>联系客服</text>
+</view>
+
+

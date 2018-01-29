@@ -1,0 +1,35 @@
+<!--map.wxml-->
+<view class="search">
+  <view class="start" bindtap="bindstart">
+    <text style='font-size:26rpx;color:#ccc'>从</text>
+    <text style="margin-left:30rpx">{{startlocation}}</text>
+  </view>
+  <view class="end" bindtap="bindend">
+    <text style='font-size:26rpx;color:#ccc'>到</text>
+    <text class='text2' style="margin-left:30rpx;color:{{color}}">{{endlocation}}</text>
+  </view>
+  <image class='change' src='../images/change.png'></image>
+</view>
+
+<view class='record' wx:if="{{!record || record == 0}}">
+  <view class='left'>
+    <image src='../images/record.png'></image>
+  </view>
+  <view class='right'>暂无历史记录</view>
+</view>
+<view class='record' wx:for="{{record}}" bindtap='bindrecord' data-record='{{item}}'>
+  <view class='left'>
+    <image src='../images/record.png'></image>
+  </view>
+  <view class='right'>
+    <text style='color:#ccc;font-size:36rpx'>{{item.startname}}</text>
+    <image src='../images/grayto.png' ></image>
+    <text style='font-size:36rpx'>{{item.endname}}</text>
+  </view>
+</view>
+
+<view class='remove' bindtap="bindopen"><text>清空历史记录</text></view>
+
+<view class='motai' catchtap='catchout' wx:if="{{motaishow}}">
+  <view class='motai-center' catchtap='catchfinish'>清空</view>
+</view>

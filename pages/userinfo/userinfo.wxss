@@ -1,0 +1,155 @@
+/* userinfo.wxss */
+
+.box{
+  width:50rpx;
+  height:50rpx;
+  margin-top: 10rpx;
+}
+
+.motai{
+  width:100%;
+  height:100%; 
+  position:absolute;
+  background: rgba(0,0,0,0.5);
+  z-index:20;
+}
+.motai-left{
+  width:100%;
+  height:100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.motai-center{
+  width:80%;
+
+  
+  margin-top: 100rpx;
+  overflow: hidden;
+}
+.user-top{
+  overflow:hidden;
+}
+.user-image{
+  width:150rpx;
+  height:150rpx;
+  background: white;
+  float:left;
+  border-radius: 100rpx;
+  border:5rpx solid cadetblue;
+  text-align: center;
+  
+  
+
+}
+.user-text{
+  float:left;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.text1{
+  font-size: 42rpx;
+  color:#333333;
+}
+.user-image2{
+  width:100rpx;
+  height:100rpx;
+  margin-top: 25rpx;
+  border-radius: 50rpx;
+}
+.text2{
+  display: block;
+  margin-top: 10rpx;
+}
+.image-price{
+  width:50rpx;
+  height:50rpx;
+}
+.price-bottom{
+  height:60rpx;
+  margin-top: 80rpx;
+  line-height: 60rpx;
+}
+.price-image{
+  height:60rpx;
+  width:60rpx;
+  float:left;
+  margin-left: 10rpx;
+}
+.price-text{
+margin-left: 30rpx;
+float:left;
+font-size:38rpx;
+color:#666666;
+
+}
+.map{
+  margin-top:24rpx;
+  overflow: hidden
+}
+.map image{
+  height:60rpx;
+  width:60rpx;
+  margin-left: 10rpx;
+  vertical-align: middle
+}
+.map text{
+  margin-left: 30rpx;
+  font-size:38rpx;
+  color:#666666;
+  vertical-align: middle
+}
+.buscard{
+  margin-top:24rpx;
+  overflow: hidden
+}
+.buscard image{
+  height:60rpx;
+  width:60rpx;
+  margin-left: 10rpx;
+  vertical-align: middle
+}
+.buscard text{
+  margin-left: 30rpx;
+  font-size:38rpx;
+  color:#666666;
+  vertical-align: middle
+}
+.share{
+  margin-top:24rpx;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  background: white;
+  line-height: 0;
+  border-style: hidden
+}
+.share::after{ 
+  border:1px solid white;
+}
+.share image{
+  height:60rpx;
+  width:60rpx;
+  margin-left: 10rpx;
+  vertical-align: middle
+}
+.share text{
+  margin-left: 30rpx;
+  font-size:38rpx;
+  color:#666666;
+  vertical-align: middle
+}
+.noPassword{
+  display: block;
+  font-size:38rpx;
+  color:#666666;
+  margin-top: 35rpx;
+}
+.AcceptPassword{
+  display: block;
+  font-size:38rpx;
+  color:#666666;
+  margin-top: 35rpx;
+}
